@@ -1,0 +1,17 @@
+{% extends 'partials/base.html' %}
+{% block title %} HomE page {% endblock %}
+
+
+{% block content%}
+{% if user.is_authenticated %}
+    {% if user.is_staff and user.is_superuser %}
+    <h1 style="font-size: 240px;">Admin Page</h1>
+    {% else %}
+    <h1 style="font-size: 240px;">User Page</h1>
+    {% endif %}
+
+{% endif %}
+{% endblock %}
+
+ 
+ 
